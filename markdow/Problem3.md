@@ -1,6 +1,10 @@
 # Table of contents
+1. [Problem statement](#problem-statement)
+2. [Recap](#recap)
+3. [Breaking down the problem](#breaking-down-the-problem)
+4. [Solution](#solution)
 
-# Problem statement
+## Problem statement <a name="problem-statement"></a>
 >The prime factors of 13195 are 5, 7, 13 and 29.  
 What is the largest prime factor of the number 600851475143?
 
@@ -13,12 +17,12 @@ In Java, the integer variable type is 4 bytes and ranges from
 In order to account for this limit, we'll have to use Java's **long**
 data type which ranges from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
 
-## Recap
+## Recap <a name="recap"></a>
 To solve this problem we'll be using our Prime class
 You can find that class [**here**](https://github.com/Galetie/Primes-Java/tree/Part1), and the
 corresponding article from the Prime series [**here**](https://jlog.au/Blog/article/63cd1fd52c1e3ac3f07b1841).
 
-## Breaking down the problem
+## Breaking down the problem <a name="breaking-down-the-problem"></a>
 The problem number being quite large means we'll have to spend quite a bit of
 processing time checking a lot of numbers, so we need to find ways to cut down
 the number of *numbers* we check. Firstly, we only care about primes
@@ -30,7 +34,7 @@ to get our result in a timely manner.
 This is within the limits of a standard int so we will use an integer to keep track
 of the largest prime
 
-## Solution
+## Solution <a name="solution"></a>
 ```java
 package Solutions;
 
