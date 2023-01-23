@@ -1,4 +1,11 @@
-## Problem statement
+## Table of contents
+1. [Problem statement](#problem-statement)
+2. [How do we test if a number is palindromic?](#how-do-we-test-if-a-number-is-palindromic)  
+2.1. [The string way](#the-string-way)  
+2.2. [The mathematical way](#the-mathematical-way)
+3. [Getting a solution](#getting-a-solution)
+
+## Problem statement <a name="problem-statement"></a>
 > A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.  
 >
 > Find the largest palindrome made from the product of two 3-digit numbers.
@@ -7,10 +14,10 @@ A bit of a change from the previous problems, this time we're asked simply to fi
 
 Both **a** and **b** will range from 100 to 999, which is 899 each giving us a total of ~900,000 loops. Let's give it a shot!
 
-## How do we test if a number is palindromic?
+## How do we test if a number is palindromic? <a name="how-do-we-test-if-a-number-is-palindromic"></a>
 A palindromic number, or in reality, a palindromic sequence is palindromic if it is the same backwards to forwards, that is for example, the number **100001** is palindromic because the reverse is also **100001**. There's various ways in which we may determine if these sequences are palindromic.
 
-### The string way
+### The string way <a name="the-string-way"></a>
 If we have a number **n** which we want to know is palindromic, we could simply convert the number to a string, and then create a copy of the string but in reverse. Finally, we would test for equality. This is done fairly easily in Java using the StringBuilder class.
 ```java
 public static boolean isPalindrome(int candidate) {
@@ -20,7 +27,7 @@ public static boolean isPalindrome(int candidate) {
 }
 ```
 
-### The mathematical way
+### The mathematical way <a name="the-mathematical-way"></a>
 Alternatively, we may use some math to extract the digits and add them in a reversed order to obtain the reversed version.
 ```java
 public static boolean isPalindrome(int candidate) {
@@ -45,7 +52,7 @@ So here's what we do.
   - **54321 / 10** becomes **5432** 
 - We stop once candidate equals 0, signalling we have consumed all the digits.
 
-## Getting a solution
+## Getting a solution <a name="getting-a-solution"></a>
 Ok so we've abstracted away obtaining the answer for whether a number is palindromic, lets for get that part and move on to brute forcing the products we need to test.
 ```java
 public static int solution() {
